@@ -22,7 +22,4 @@ TRAINING WEB
 5.	ISP không thấy  sang root name server để tìm Top Level Domain  trả về địa chỉ IP  lên TLD domain server trả alternative name server và đưa domain tương ứng  được trả IP
 6.	Browser có được IP rồi truy cập web
 •	Làm sao TLD biết đc server nào giữ domain của mình trong khi nó ko biết domain của mình tương ứng với IP nào?
-
-
-
-
+  Khi đăng ký domain thì sẽ có một cái list alternative name server gửi tới TLD quản lý
