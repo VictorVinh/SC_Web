@@ -1,0 +1,28 @@
+TRAINING WEB
+1.	
+-	Internet: Hệ thống các mạng kết nối với nhau (Inter: among/between; net: nework)
+-	ISP (Internet Service Provider): như (VNPT, Viettel,… : Regional ISP)
+-	OSI model (Open System Interconnection):
+•	Application: Cung cấp giao diện để thao tác với mạng (HTTP, FTP, SMTP, DNS)
+•	Presentation: Xử lý và encrypt data nhập vào
+•	Session: Phiên quản lý kết nối giữa các app
+•	Transport: Protocol nằm ở dưới cùng (hỗ trợ vận chuyển các gói data để thiết lập các protocol cao hơn)
+•	Network: Cung cấp IP
+•	Datalink: switch, Ethernet, địa chỉ Mac của mỗi máy để router biết, dùng để di chuyển sang các IP khác
+•	Physical: dây
+2.	Protocol:
+-	DNS (Domain Name System):
+•	Domain (tên miền): tên cho IP 
+•	Subdomain(.Third LD).Second Level Domain.Top Level Domain(.vn, .com,...).root (thường không hiện)  Đi từ top lên trên
+•	Cách hoạt động: Lưu vào nhiều máy tính
+1.	Browser kiểm tra cache ở bộ nhớ tạm (xem có tương ứng với IP chưa)
+2.	Browser sang hỏi hệ điều hành(OS) xem có chưa
+3.	OS không biết  sang DNS Revolver (server) (kiểm tra cache)
+4.	Không thấy  sang ISP 
+5.	ISP không thấy  sang root name server để tìm Top Level Domain  trả về địa chỉ IP  lên TLD domain server trả alternative name server và đưa domain tương ứng  được trả IP
+6.	Browser có được IP rồi truy cập web
+•	Làm sao TLD biết đc server nào giữ domain của mình trong khi nó ko biết domain của mình tương ứng với IP nào?
+
+
+
+
