@@ -3,41 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Furniro - Home</title>
 </head>
 <body>
-    <h1>Welcome to my Personal Website</h1>
-    <p>This is a website that I made to introduce myself using HTML</p>
-    <img scr="Profile.jpg" alt="My Profile Picture">
-    <dl>
-        <h2>About me:</h2>
-            <dl>
-                <dt>Name: Trần Tiến Vinh</dt>
-                <dt>Date of birth: 30/09/2008</dt>
-                <dt>Study at: THPT Chuyên Lê Hồng Phong</dt>
-            </dl>
-        <h2>My hobbies:</h2>
-            <ol>
-                <li>Play games:</li>
-                    <ul>
-                        <li>Play chess <a href="https://www.chess.com/member/victory3009"> Chess.com </a></li> 
-                        <li><a href="https://www.roblox.com/home">Roblox </a> </li>
-                    </ul>
-                <li>Sleep</li>
-                <li>Read comics and novels</li>
-            </ol>
-        <h2>My contact:</h2>
-            <dl>
-                <dt>My Facebook profile: <a href="https://www.facebook.com/profile.php?id=100088960410873"> Click here </a></dt>
-            </dl>
-        <form>
-            <label>Do you have any feedback for my website?</label>
-            <input type="radio" name="yes_no"> Yes</input>
-            <input type="radio" name="yes_no"checked> No</input>
-        </form>
-    </dl>
+    <header>
+        <div id="page-logo">
+            <a href="index.html" id="brand-logo">
+                <img id="brand-img" src="Meubel House_Logos-05.png" alt="Furniro logo">
+                <h1 id="brand-name">Furniro</h1>
+            </a>
+        </div>
+        <nav id="page-nav">
+            <ul id="page-nav-list">
+                <li><a href="index.html" id="home-link">Home</a></li>
+                <li><a href="shop.html" id="shop-link">Shop</a></li>
+                <li><a href="" id="about-link">About</a></li>
+                <li><a href="" id="contact-link">Contact</a></li>
+            </ul>
+        </nav>
+        <nav id="page-icon">
+            <ul id="page-icon-list">
+                <li><a href="">Alert</a></li>
+                <li><a href="">Search</a></li>
+                <li><a href="">Favorite</a></li>
+                <li><a href="">Cart</a></li>
+            </ul>
+        </nav>
+    </header>  
 
+    <main>
+        <section id="section-1">
+            <div id="intro-box">
+                <p id="new-arrival">New Arrival</p>
+                <h1 id="discover">Discover Our New Collection</h1>
+                <p id="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit nisi soluta suscipit consectetur reprehenderit asperiores quod natus tempore. Doloribus dolor est, incidunt beatae ipsum modi molestiae praesentium unde et.</p>
+                <button id="Buy-now-button">BUY NOW</button>
+            </div>
+        </section>
+        <section id="section-2">
+            <h2 id="browse-the-range">Browse The Range</h2>
+            <p id="section-2-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+            <div>
+                <img src="Mask Group.png" alt="Dining image" id="dining-img">
+                <p id="dining-text">Dining</p>
+            </div>
+            <div>
+                <img src="Image-living room.png" alt="Living room image" id="living-img">
+                <p id="living-text">Living</p>
+            </div>
+            <div>
+                <img src="Bedroom.png" alt="Bedroom image" id="bedroom-img">
+                <p id="bedroom-text">Bedroom</p>
+            </div>
+        </section>
 
+        <section id="section-3">
+            <h2 id="our-products">Our Products</h2>
 
+            <div class="row">
+                <div class="column" id="column-1">
+                    <div id="Syltherin">
+                        <img src="" alt="Syltherin image">
+                        <span><p>-30%</p></span>
+                        <h3>Syltherin</h3>
+                        <p>Stylish cafe chair</p>
+                        <h4>Rp 2.500.000</h4>
+                        <p><del>Rp 3.500.000</del></p>
+                    </div>
+                    
+                    <div id="Leviosa">
+                        <img src="" alt="Leviosa image">
+                        <span><p>-30%</p></span>
+                        <h3>Leviosa</h3>
+                        <p>Stylish cafe chair</p>
+                        <h4>Rp 2.500.000</h4>
+                    </div>
+                    
+                    <div id="Lolito">
+                        <img src="" alt="Lolito image">
+                        <span><p>-50%</p></span>
+                        <h3>Lolito</h3>
+                        <p>Luxury big sofa</p>
+                        <h4>Rp 7.000.000</h4>
+                    </div>
+
+                    <div id="Respira">
+                        <img src="" alt="Respira image">
+                        <span><p>New</p></span>
+                        <h3>Respira</h3>
+                        <p>Outdoor bar table and stool</p>
+                        <h4>Rp 500.000</h4>
+                    </div>
+                </div>
+            </div>
+
+            <button id="show-more-button">Show More</button>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <h3>Furniro.</h3>
+        <p id="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+
+        <nav id="footer-nav">
+            <div id="footer-links-nav">
+                <p>Links</p>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+
+            <div id="footer-help-nav">
+                <p>Help</p>
+                <ul>
+                    <li><a href="">Payment Options</a></li>
+                    <li><a href="">Returns</a></li>
+                    <li><a href="">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <form action="" method="get">
+                <p>Newsletter</p>
+                <input type="text" placeholder="Enter Your Email Address">
+                <button id="subscribe-button">SUBSCRIBE</button>
+            </form>
+        </nav>
+        <hr>
+        <p id="copyright">2023 furino. All rights reverved</p>
+    </footer>
 </body>
-</html> 
+</html>
