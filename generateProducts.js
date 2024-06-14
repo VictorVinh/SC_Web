@@ -7,8 +7,8 @@ const products = [
         tag: "-30%",
         short_desc: "Stylish cafe chair",
         unit_price: "Rp",
-        price: 2500000,
-        old_price: 3500000,
+        price: "2.500.000",
+        old_price: "3.500.000",
     },
     {
         id: "Leviosa",
@@ -18,7 +18,7 @@ const products = [
         tag: "-30%",
         short_desc: "Stylish cafe chair",
         unit_price: "Rp",
-        price: 2500000,
+        price: "2.500.000",
     },
     {
         id: "Lolito",
@@ -28,7 +28,7 @@ const products = [
         tag: "-50%",
         short_desc: "Luxury big sofa",
         unit_price: "Rp",
-        price: 7000000,
+        price: "7.000.000",
     },
     {
         id: "Respira",
@@ -38,7 +38,7 @@ const products = [
         tag: "New",
         short_desc: "Outdoor bar table and stool",
         unit_price: "Rp",
-        price: 500000,
+        price: "500.000",
     },
   ];
   
