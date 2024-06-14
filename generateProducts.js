@@ -66,23 +66,26 @@ function generate_product(product) {
     return a_lot_products;
 }
 window.onload = function () {
-    // Check if the current page is the home page
     if (window.location.pathname === '/index.html') {
         const productContainer = document.getElementById("column-1");
         for (const product of products) {
             const productElement = generate_product(product);
             productContainer.insertAdjacentHTML("beforeend", productElement);
+        }
+        for (const product of products) {
+            const productElement = generate_product(product);
+            productContainer.insertAdjacentHTML("beforeend", productElement);
     }
 }
-  
-    // Check if the current page is the shop page
     if (window.location.pathname === '/shop.html') {
         const productContainer = document.getElementById("column-2");
         for (const product of products) {
             const productElement = generate_product(product);
             productContainer.insertAdjacentHTML("beforeend", productElement);
+        }
+        for (const product of products) {
+            const productElement = generate_product(product);
+            productContainer.insertAdjacentHTML("beforeend", productElement);
       }
     }
-  }
-
-
+}
