@@ -1,47 +1,18 @@
-const products = [
-    {
-        id: "Syltherin", 
-        name: "Syltherin",
-        image: "",
-        discount: 30,
-        tag: "-30%",
-        short_desc: "Stylish cafe chair",
-        unit_price: "Rp",
-        price: "2.500.000",
-        old_price: "3.500.000",
-    },
-    {
-        id: "Leviosa",
-        name: "Leviosa",
-        image: "",
-        discount: 30,
-        tag: "-30%",
-        short_desc: "Stylish cafe chair",
-        unit_price: "Rp",
-        price: "2.500.000",
-    },
-    {
-        id: "Lolito",
-        name: "Loilito",
-        image: "",
-        discount: 50,
-        tag: "-50%",
-        short_desc: "Luxury big sofa",
-        unit_price: "Rp",
-        price: "7.000.000",
-    },
-    {
-        id: "Respira",
-        name: "Respira",
-        image: "",
-        discount: 0,
-        tag: "New",
-        short_desc: "Outdoor bar table and stool",
-        unit_price: "Rp",
-        price: "500.000",
-    },
-  ];
-  
+let fetched = false;
+let products = null;
+async function getProduct(){
+    if (fetched==true){
+        var product_json = JSON.parse(localStorage.getItem("products"));
+        return product_json;
+    }
+    const response = await fetch("https://dummyapi-0uzr.onrender.com/products");
+    const fetchedProducts = await response.json();
+    console.log(fetchedProducts);
+    localStorage.setItem("products", JSON.stringify(fetchedProducts));
+    products = fetchedProducts;
+    return products;
+}
+
 function generate_product(product) {
     if (product.image) {
         product.image = "data:image/png;base64," +product.image;
@@ -65,9 +36,12 @@ function generate_product(product) {
     </div>`
     return a_lot_products;
 }
-window.onload = function () {
+window.onload = async function printProduct() {
+    await getProduct();
+
     if (window.location.pathname === '/index.html') {
         const productContainer = document.getElementById("column-1");
+        // const fourproducts= products.slice(0,4);
         for (const product of products) {
             const productElement = generate_product(product);
             productContainer.insertAdjacentHTML("beforeend", productElement);
@@ -79,6 +53,7 @@ window.onload = function () {
 }
     if (window.location.pathname === '/shop.html') {
         const productContainer = document.getElementById("column-2");
+        // const fourproducts= products.slice(0,4);
         for (const product of products) {
             const productElement = generate_product(product);
             productContainer.insertAdjacentHTML("beforeend", productElement);
