@@ -38,8 +38,8 @@ function generate_product(product) {
 }
 window.onload = async function printProduct() {
     await getProduct();
-
-    if (window.location.pathname === '/index.html') {
+    
+    if (window.location.pathname.includes('index.html')) {
         const productContainer = document.getElementById("column-1");
             for (const product of products) {
                 const productElement = generate_product(product);
@@ -50,7 +50,7 @@ window.onload = async function printProduct() {
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
         } 
-    if (window.location.pathname === '/shop.html') {
+    if (window.location.pathname.includes('shop.html')) {
         const productContainer = document.getElementById("column-2");
             for (const product of products) {
                 const productElement = generate_product(product);
