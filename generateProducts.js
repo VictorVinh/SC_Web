@@ -41,26 +41,20 @@ window.onload = async function printProduct() {
 
     if (window.location.pathname === '/index.html') {
         const productContainer = document.getElementById("column-1");
-        // const fourproducts= products.slice(0,4);
-        for (const product of products) {
-            const productElement = generate_product(product);
-            productContainer.insertAdjacentHTML("beforeend", productElement);
-        }
-        for (const product of products) {
-            const productElement = generate_product(product);
-            productContainer.insertAdjacentHTML("beforeend", productElement);
-    }
+        for (let i=1;i<=2;i++){
+            for (const product of products) {
+                const productElement = generate_product(product);
+                productContainer.insertAdjacentHTML("beforeend", productElement);
+            }
+        } 
 }
     if (window.location.pathname === '/shop.html') {
         const productContainer = document.getElementById("column-2");
-        // const fourproducts= products.slice(0,4);
-        for (const product of products) {
-            const productElement = generate_product(product);
-            productContainer.insertAdjacentHTML("beforeend", productElement);
+        for (let i=1;i<=4;i++){
+            for (const product of products) {
+                const productElement = generate_product(product);
+                productContainer.insertAdjacentHTML("beforeend", productElement);
+            }
         }
-        for (const product of products) {
-            const productElement = generate_product(product);
-            productContainer.insertAdjacentHTML("beforeend", productElement);
-      }
     }
 }

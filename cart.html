@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro - Home</title>
     <script src="generateProducts.js"></script>
-    .material-icons{<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">}
+    .material-icons {<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">}
 </head>
 <body>
     <header>
@@ -31,47 +31,64 @@
                 <li><a href="cart.html"><span class="material-icons">shopping_cart</span>Cart</a></li>
             </ul>
         </nav>
-    </header>  
+    </header>
 
-    <main>
-        <section id="section-1">
-            <div id="intro-box">
-                <img src="Images/1st-page-img.png" alt="home-img">
-                <p id="new-arrival">New Arrival</p>
-                <h1 id="discover">Discover Our New Collection</h1>
-                <p id="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugit nisi soluta suscipit consectetur reprehenderit asperiores quod natus tempore. Doloribus dolor est, incidunt beatae ipsum modi molestiae praesentium unde et.</p>
-                <button id="Buy-now-button">BUY NOW</button>
-            </div>
-        </section>
-        <section id="section-2">
-            <h2 id="browse-the-range">Browse The Range</h2>
-            <p id="section-2-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-            <div>
-                <img src="Images/dining.png" alt="Dining image" id="dining-img">
-                <p id="dining-text">Dining</p>
-            </div>
-            <div>
-                <img src="Images/living room.png" alt="Living room image" id="living-img">
-                <p id="living-text">Living</p>
-            </div>
-            <div>
-                <img src="Images/Bedroom.png" alt="Bedroom image" id="bedroom-img">
-                <p id="bedroom-text">Bedroom</p>
-            </div>
-        </section>
+    <main> 
+        <nav>
+            <img src="Images/background.png" alt="background">
+            <img src="Images/Furniro logo.png" alt="Furniro-logo">
+            <h2 id="cart-header">Cart</h2>
+            <ul>
+                <li id="Home >">Home ></li>
+                <li id="cart">Cart</li>
+            </ul>
+        </nav>
 
-        <section id="section-3">
-            <h2 id="our-products">Our Products</h2>
+        <div id="purchase_product">
+            <ul id="purchase_product_desc">
+                <li id="Product">Product</li>
+                <li id="Price">Price</li>
+                <li id="Quantity">Quantity</li>
+                <li id="Subtotal">Subtotal</li>
+            </ul>
 
-            <div class="row">
-                <div class="column" id="column-1">
-                </div>
-            </div>
+            <ul id="product_details">
+                <li><img src="Images/example-product-img.png" alt="example"></li>
+                <li><p>Asgaard sofa</p></li>
+                <li><p>Rs. 250,000.00</p></li>
+                <li><input type="number" id="product_amount" value="1"></li>
+                <li><h5>Rs. 250,000.00</h5></li>
+                <li><img src="Images/delete bin.png" alt="bin"></li>
+            </ul>
 
-            <button id="show-more-button">Show More</button>
-        </section>
+            <article id="total-place">
+                <h3>Cart Totals</h3>
+                <p id="Subtotal-text">Subtotal</p>
+                <p id="Subtotal-number">Rs. 250,000.00</p>
+                <p id="Total-text">Total</p>
+                <p id="Total-number">Rs. 250,000.00</p>
+            </article>
+        </div>
+
+        <div id="commit">
+            <img src="Images/trophy.png" alt="trophy">
+            <h3>High quality</h3>
+            <p>crafted from top materials</p>
+
+            <img src="Images/verified.png" alt="verified">
+            <h3>Warranty Protection</h3>
+            <p>Over 2 years</p>
+
+            <img src="Images/shipping.png" alt="shipping">
+            <h3>Free shipping</h3>
+            <p>Order over 150 $</p>
+
+            <img src="Images/customer-support.png" alt="support">
+            <h3>24 / 7 Support</h3>
+            <p>Dedicated support</p>
+        </div>
     </main>
-
+    
     <footer>
         <hr>
         <h3>Furniro.</h3>
@@ -83,8 +100,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
-                    <li><a href="blog.html" id="about-link">About</a></li>
-                    <li><a href="contact.html" id="contact-link">Contact</a></li>
+                    <li><a href="blog.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
