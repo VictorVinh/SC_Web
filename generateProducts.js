@@ -1,7 +1,7 @@
 let fetched = false;
 let products = null;
 async function getProduct(){
-    if (fetched==true){
+    if (fetched){
         var product_json = JSON.parse(localStorage.getItem("products"));
         return product_json;
     }
@@ -45,17 +45,16 @@ function generate_product(product) {
 }
 window.onload = async function printProduct() {
     await getProduct();
-
-    if (window.location.pathname === '/index.html') {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith("/")) {
         const productContainer = document.getElementById("column-1");
+        const product= await getProduct();
             for (const product of products) {
                 const productElement = generate_product(product);
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
         } 
-    if (window.location.pathname.includes('shop.html')) {
+    if (window.location.pathname.endsWith('shop.html')) {
         const productContainer = document.getElementById("column-2");
-        const product= await getProduct();
         for (let i = 0; i <= 3; i++) { 
             const moreProducts = await getProduct();
             for (const product of moreProducts) {
