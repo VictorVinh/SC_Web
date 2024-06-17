@@ -5,11 +5,18 @@ async function getProduct(){
         var product_json = JSON.parse(localStorage.getItem("products"));
         return product_json;
     }
-    const response = await fetch("https://dummyapi-0uzr.onrender.com/products");
-    const fetchedProducts = await response.json();
+    let response;
+    if (window.location.pathname.includes('shop.html')) {
+        response = await fetch("https://dummyapi-0uzr.onrender.com/products?limit=4");
+    } else {
+        response = await fetch("https://dummyapi-0uzr.onrender.com/products");
+    }
+    let fetchedProducts = await response.json();
+    fetchedProducts=fetchedProducts.product_list;
     console.log(fetchedProducts);
     localStorage.setItem("products", JSON.stringify(fetchedProducts));
     products = fetchedProducts;
+    fetched=true;
     return products;
 }
 
@@ -38,35 +45,22 @@ function generate_product(product) {
 }
 window.onload = async function printProduct() {
     await getProduct();
-
-    if (window.location.pathname === '/index.html') {
+    if (window.location.pathname.includes('index.html')) {
         const productContainer = document.getElementById("column-1");
             for (const product of products) {
                 const productElement = generate_product(product);
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
-            for (const product of products) {
-                const productElement = generate_product(product);
-                productContainer.insertAdjacentHTML("beforeend", productElement);
-            }
         } 
-    if (window.location.pathname === '/shop.html') {
+    if (window.location.pathname.includes('shop.html')) {
         const productContainer = document.getElementById("column-2");
-            for (const product of products) {
-                const productElement = generate_product(product);
-                productContainer.insertAdjacentHTML("beforeend", productElement);
-            }
-            for (const product of products) {
-                const productElement = generate_product(product);
-                productContainer.insertAdjacentHTML("beforeend", productElement);
-            }
-            for (const product of products) {
-                const productElement = generate_product(product);
-                productContainer.insertAdjacentHTML("beforeend", productElement);
-            }
-            for (const product of products) {
+        const product= await getProduct();
+        for (let i = 0; i <= 3; i++) { 
+            const moreProducts = await getProduct();
+            for (const product of moreProducts) {
                 const productElement = generate_product(product);
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
         }
+    }
 }
