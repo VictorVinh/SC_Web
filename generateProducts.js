@@ -45,7 +45,8 @@ function generate_product(product) {
 }
 window.onload = async function printProduct() {
     await getProduct();
-    if (window.location.pathname.includes('index.html')) {
+
+    if (window.location.pathname === '/index.html') {
         const productContainer = document.getElementById("column-1");
             for (const product of products) {
                 const productElement = generate_product(product);
