@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
+    <link rel="stylesheet" href="Profile.css">
 </head>
 <body>
-    <h1>Welcome to my Personal Website</h1>
-    <p>This is a website that I made to introduce myself using HTML</p>
-    <img scr="Profile.jpg" alt="My Profile Picture">
-    <dl>
+    <div class="Welcome">
+        <h1 id="title">Welcome to my Personal Website</h1>
+        <p>This is a website that I made to introduce myself using HTML</p>
+    </div>
+    <br><img src="profile.jpg" alt="profile-picture" id="profile-img">
+    <div id="information-box">
         <h2>About me:</h2>
             <dl>
                 <dt>Name: Trần Tiến Vinh</dt>
@@ -27,15 +30,18 @@
                 <li>Read comics and novels</li>
             </ol>
         <h2>My contact:</h2>
-            <dl>
-                <dt>My Facebook profile: <a href="https://www.facebook.com/profile.php?id=100088960410873"> Click here </a></dt>
-            </dl>
+        
+        <div>
+            <p>My Facebook profile: <a href="https://www.facebook.com/profile.php?id=100088960410873"> Click here </a></p>
+            <p>My Gmail: <a href="mailto: vinh.trantien0912@gmail.com">vinh.trantien0912@gmail.com</a></p>
+        </div>
+                
         <form>
             <label>Do you have any feedback for my website?</label>
             <input type="radio" name="yes_no"> Yes</input>
             <input type="radio" name="yes_no"checked> No</input>
         </form>
-    </dl>
+    </div>
 
 
 
