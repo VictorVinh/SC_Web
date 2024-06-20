@@ -63,4 +63,32 @@ window.onload = async function printProduct() {
             }
         }
     }
+    const button=document.getElementById("show-more-button");
+    button.addEventListener("click", show_more_function);
 }
+
+let count=0;
+let count_product=0;
+async function show_more_function(){
+    await getProduct();
+    const products= await getProduct();
+    const productContainer = document.getElementById("column-1");
+    if (count%2==0){
+        for (const product of products.slice(0,4)) {
+            const productElement = generate_product(product);
+            productContainer.insertAdjacentHTML("beforeend", productElement);
+        }
+    }
+    else {
+        for (const product of products.slice(4,products.length)) {
+            const productElement = generate_product(product);
+            productContainer.insertAdjacentHTML("beforeend", productElement);
+        }
+    }
+    count+=1;
+    count_product+=4;
+    if (count_product>=products.length){
+        button.disabled=true;
+    }
+}
+
