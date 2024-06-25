@@ -1,0 +1,94 @@
+#Buy-now-button{
+    background-color: #B88E2F;
+    color: #FFFFFF;
+    border-width: 0;
+}
+#discover{
+    color: #B88E2F;
+    size: 52px;
+    line-height: 65px;
+}
+#intro-box{
+    background-color: #FFF3E3;
+    width: 634px;
+    height: 443px;
+    z-index: 1;
+    position: relative;
+}
+#home-img{
+    z-index: 0;
+    position: relative;
+
+}
+.material-icons.heart_button {
+    color: gray;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+.material-icons.heart_button.active {
+    color: red;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  
+.column{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+  }
+  
+.column img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+.column h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+.column p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+.column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-transform: capitalize;
+  }
+
+.product {
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+.product:hover {
+    box-shadow: 0 0 20px grey;
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+
+#Hover_stuffs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+.product:hover #Hover_stuffs {
+    opacity: 1;
+    transform: translateY(-50px);
+    z-index: 1;
+  }
