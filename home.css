@@ -1,25 +1,51 @@
+.button{
+  width: 150px;
+  height: 30px;
+  color: #B88E2F;
+  background-color: #FFFFFF;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.other_button{
+  background-color: #B88E2F;
+  color: #FFFFFF;
+  border-width: 0;
+  cursor: pointer;
+}
+
 #Buy-now-button{
-    background-color: #B88E2F;
-    color: #FFFFFF;
-    border-width: 0;
+  width: Hug (222px)px;
+  height: Hug (74px)px;
+  top: 553.3px;
+  left: 778px;
+  padding: 25px 72px 25px 72px;
+  gap: 10px;
+  opacity: 0px;
+
 }
 #discover{
     color: #B88E2F;
     size: 52px;
     line-height: 65px;
 }
+#section-1 img{
+  width: 1440px;
+  height: 1007.93px;
+  top: -106.7px;
+  gap: 0px;
+  opacity: 0px;
+  position: relative;
+
+}
 #intro-box{
     background-color: #FFF3E3;
     width: 634px;
     height: 443px;
-    z-index: 1;
-    position: relative;
+    position: absolute;
+    top: 10px;
 }
-#home-img{
-    z-index: 0;
-    position: relative;
 
-}
 .material-icons.heart_button {
     color: gray;
     cursor: pointer;
@@ -47,8 +73,10 @@
   }
   
 .column img{
-    width: 100%;
-    height: 150px;
+    width: 285px;
+    height: 301px;
+    gap: 0px;
+    opacity: 0px;
     object-fit: cover;
   }
   
@@ -58,11 +86,11 @@
     margin-top: 10px;
   }
   
-.column p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
+.desc{
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
   
 .column h4 {
     font-size: 16px;
@@ -73,22 +101,62 @@
 
 .product {
     transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
   }
+.product img{
+  position: relative;
+}
 .product:hover {
     box-shadow: 0 0 20px grey;
     transform: translateY(-5px);
     opacity: 1;
   }
 
-#Hover_stuffs {
+.Hover_stuffs {
     position: absolute;
     bottom: 0;
     left: 0;
     opacity: 0;
   }
   
-.product:hover #Hover_stuffs {
+.product:hover .Hover_stuffs {
     opacity: 1;
     transform: translateY(-50px);
     z-index: 1;
   }
+.discount_circle{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #E97171;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.tag_circle{
+  text-transform: capitalize;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  background-color: #2EC1AC;
+  color: #FFFFFF;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  
+}
+/* #add_to_cart{
+
+} */
+
+.list{
+  display: inline;
+}

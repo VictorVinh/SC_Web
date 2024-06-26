@@ -2,8 +2,8 @@ let fetched = false;
 let products = null;
 const addToCartButtons = document.querySelectorAll('#add_to_cart');
 let cart=[];
-let count=0;
-let count_product=0;
+var count=0;
+var count_product=0;
 
 async function getProduct(){
     if (fetched){
@@ -29,25 +29,27 @@ function generate_product(product) {
     if (product.image) {
         product.image = "data:image/png;base64," +product.image;
     }
-    const heartButtonId = 'heart_button_' + product.name;
-    const a_lot_products = `<div class="product" id="${product.name}">
+    let heartButtonId = 'heart_button_' + product.name;
+    let a_lot_products = `<div class="product" id="${product.name}">
         <img src="${product.image}" alt="${product.name}">
-        <p>${product.discount? `${product.discount}%`: "" }</p>
-        <p>${product.tag? `${product.tag}` :""}</p>
+        <p ${product.tag ? (product.discount ? 'class="discount_circle"' : 'class="tag_circle"') : product.discount? 'class="discount_circle"' :''}>
+            ${product.discount ? `-${product.discount}%` : (product.tag ? `${product.tag}` : "")}
+        </p>
         
         <h3>${product.name}</h3>
-        <p>${product.short_desc}</p>
+        <p class="desc">${product.short_desc}</p>
         <h4>${product.unit_price} ${product.price}</h4>
-        <p><del>${product.old_price? `${product.unit_price} ${product.old_price}` :""}</del></p>
-        <div id="Hover_stuffs">
-            <button id="add_to_cart">Add to cart</button>
+        <p class="desc"><del>${product.old_price? `${product.unit_price} ${product.old_price}` :""}</del></p>
+        <div class="Hover_stuffs">
+            <button class="add_to_cart button">Add to cart</button>
             <a href=""><span class="material-icons">share</span>Share</a>
             <a href=""><span class="material-icons">sync_alt</span>Compare</a>
-            <span class="material-icons heart_button" id="${heartButtonId}">favorite</span> Like
+            <span class="material-icons heart_button list" id="${heartButtonId}" ${localStorage.getItem(heartButtonId) === 'active'? 'class="active"' : ''}>favorite</span> Like
         </div>
     </div>`
     return a_lot_products;
 }
+
 async function printProduct() {
     await getProduct();
     if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith("/")) {
@@ -57,6 +59,8 @@ async function printProduct() {
                 const productElement = generate_product(product);
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
+        let button=document.getElementById("show-more-button");
+        button.addEventListener("click", show_more_function);
         addHeartButton();
     } 
     if (window.location.pathname.endsWith('shop.html')) {
@@ -67,11 +71,9 @@ async function printProduct() {
                 const productElement = generate_product(product);
                 productContainer.insertAdjacentHTML("beforeend", productElement);
             }
-        }
         addHeartButton();
     }
-    let button=document.getElementById("show-more-button");
-    button.addEventListener("click", show_more_function);
+    }
 }
 
 async function show_more_function(){
@@ -96,7 +98,7 @@ async function show_more_function(){
 }
 
 function addHeartButton(){
-    var heart_buttons = document.querySelectorAll(".heart_button");
+    const heart_buttons = document.querySelectorAll(".heart_button");
     heart_buttons.forEach(function(button) {
         var buttonId = button.id;
         if (localStorage.getItem(buttonId) === 'active') {
@@ -107,8 +109,14 @@ function addHeartButton(){
             var buttonState = this.classList.contains('active');
             if (buttonState) {
                 localStorage.setItem(buttonId, 'active');
+                const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
+                favoriteProducts.push(products.find(product => product.name === buttonId.split('_')[2]));
+                localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             } else {
                 localStorage.removeItem(buttonId);
+                const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
+                favoriteProducts.splice(favoriteProducts.findIndex(product => product.name === buttonId.split('_')[2]), 1);
+                localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             }
         });
     });
