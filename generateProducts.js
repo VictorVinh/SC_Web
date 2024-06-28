@@ -53,7 +53,7 @@ function generate_product(product) {
 async function printProduct() {
     await getProduct();
     if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith("/")) {
-        const productContainer = document.getElementById("column-1");
+        const productContainer = document.getElementById("row1");
         const product= await getProduct();
             for (const product of products) {
                 const productElement = generate_product(product);
@@ -64,7 +64,7 @@ async function printProduct() {
         addHeartButton();
     } 
     if (window.location.pathname.endsWith('shop.html')) {
-        const productContainer = document.getElementById("column-2");
+        const productContainer = document.getElementById("row2");
         for (let i = 0; i <= 3; i++) { 
             const moreProducts = await getProduct();
             for (const product of moreProducts) {
@@ -79,7 +79,7 @@ async function printProduct() {
 async function show_more_function(){
     await getProduct();
     const products= await getProduct();
-    const productContainer= document.getElementById("column-1");
+    const productContainer= document.getElementById("row1");
     let start= count_product;
     let end= count_product + 4;
     if (end > 40) {
@@ -109,14 +109,14 @@ function addHeartButton(){
             var buttonState = this.classList.contains('active');
             if (buttonState) {
                 localStorage.setItem(buttonId, 'active');
-                const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
-                favoriteProducts.push(products.find(product => product.name === buttonId.split('_')[2]));
-                localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
+                // const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
+                // favoriteProducts.push(products.find(product => product.name === buttonId.split('_')[2]));
+                // localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             } else {
                 localStorage.removeItem(buttonId);
-                const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
-                favoriteProducts.splice(favoriteProducts.findIndex(product => product.name === buttonId.split('_')[2]), 1);
-                localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
+                // const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
+                // favoriteProducts.splice(favoriteProducts.findIndex(product => product.name === buttonId.split('_')[2]), 1);
+                // localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             }
         });
     });

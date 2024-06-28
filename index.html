@@ -6,12 +6,12 @@
     <title>Furniro - Home</title>
     <script src="generateProducts.js" defer></script>
     <link rel="stylesheet" href="home.css">
-    .material-icons{<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div id="page-logo">
-            <a href="index.html" id="brand-logo">
+        <div id="page-logo" >
+            <a href="index.html" id="brand-logo" class="logo">
                 <img id="brand-img" src="Images/Furniro logo.png" alt="Furniro logo">
                 <h1 id="brand-name">Furniro</h1>
             </a>
@@ -26,17 +26,16 @@
         </nav>
         <nav id="page-icon">
             <ul id="page-icon-list">
-                <li><a href=""><span class="material-icons">person_alert</span>Alert</a></li>
-                <li><a href=""><span class="material-icons">search</span>Search</a></li>
-                <li><a href=""><span class="material-icons">favorite</span>Favorite</a></li>
-                <li><a href="cart.html"><span class="material-icons">shopping_cart</span>Cart</a></li>
+                <li><a href=""><span class="material-icons">person</span></a></li>
+                <li><a href=""><span class="material-icons">search</span></a></li>
+                <li><a href=""><span class="material-icons">favorite</span></a></li>
+                <li><a href="cart.html"><span class="material-icons">shopping_cart</span></a></li>
             </ul>
         </nav>
     </header>  
 
     <main>
         <section id="section-1">
-            <img src="Images/1st-page-img.png" alt="home-img" id="home-img">
             <div id="intro-box">
                 <p id="new-arrival">New Arrival</p>
                 <h1 id="discover">Discover Our New Collection</h1>
@@ -47,26 +46,26 @@
         <section id="section-2">
             <h2 id="browse-the-range">Browse The Range</h2>
             <p id="section-2-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-            <div>
-                <img src="Images/dining.png" alt="Dining image" id="dining-img">
-                <p id="dining-text">Dining</p>
-            </div>
-            <div>
-                <img src="Images/living room.png" alt="Living room image" id="living-img">
-                <p id="living-text">Living</p>
-            </div>
-            <div>
-                <img src="Images/Bedroom.png" alt="Bedroom image" id="bedroom-img">
-                <p id="bedroom-text">Bedroom</p>
+            <div id="grid-page1">
+                <div>
+                    <img src="Images/dining.png" alt="Dining image" id="dining-img">
+                    <p id="dining-text">Dining</p>
+                </div>
+                <div>
+                    <img src="Images/living room.png" alt="Living room image" id="living-img">
+                    <p id="living-text">Living</p>
+                </div>
+                <div>
+                    <img src="Images/Bedroom.png" alt="Bedroom image" id="bedroom-img">
+                    <p id="bedroom-text">Bedroom</p>
+                </div>
             </div>
         </section>
 
         <section id="section-3">
             <h2 id="our-products">Our Products</h2>
 
-            <div class="row">
-                <div class="column" id="column-1">
-                </div>
+            <div class="row" id="row1">
             </div>
 
             <button id="show-more-button" class="button">Show More</button>
@@ -75,11 +74,12 @@
 
     <footer>
         <hr>
-        <h3>Furniro.</h3>
-        <p id="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
-
         <nav id="footer-nav">
-            <div id="footer-links-nav">
+            <div id="column1" class="footer-nav-deco">
+                <h3>Furniro.</h3>
+                <p id="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+            </div>
+            <div id="footer-links-nav" class="footer-nav-deco">
                 <p>Links</p>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -89,7 +89,7 @@
                 </ul>
             </div>
 
-            <div id="footer-help-nav">
+            <div id="footer-help-nav" class="footer-nav-deco">
                 <p>Help</p>
                 <ul>
                     <li><a href="">Payment Options</a></li>
@@ -98,11 +98,11 @@
                 </ul>
             </div>
 
-            <form action="" method="get">
+            <form action="" method="get" class="footer-nav-deco">
                 <p>Newsletter</p>
                 <input type="text" placeholder="Enter Your Email Address" id="email-input">
                 <button id="subscribe-button">SUBSCRIBE</button>
-            </form>f
+            </form>
         </nav>
         <hr>
         <p id="copyright">2023 furino. All rights reverved</p>
