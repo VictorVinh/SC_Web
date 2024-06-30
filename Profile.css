@@ -1,0 +1,26 @@
+body{
+    background-color: dimgrey ;
+}
+.Welcome{
+    border-style: solid;
+}
+#title{
+    color: cyan;
+    position: relative;
+    
+}
+.Welcome p{
+
+}
+#information-box{
+    border-style: dashed;
+    width: 300px;
+    padding: 20px;
+    background-color: beige;
+}
+#profile-img{
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    overflow: hidden;
+}

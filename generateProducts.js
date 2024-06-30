@@ -42,9 +42,9 @@ function generate_product(product) {
         <p class="desc"><del>${product.old_price? `${product.unit_price} ${product.old_price}` :""}</del></p>
         <div class="Hover_stuffs">
             <button class="add_to_cart button">Add to cart</button>
-            <a href=""><span class="material-icons">share</span>Share</a>
-            <a href=""><span class="material-icons">sync_alt</span>Compare</a>
-            <span class="material-icons heart_button list" id="${heartButtonId}" ${localStorage.getItem(heartButtonId) === 'active'? 'class="active"' : ''}>favorite</span> Like
+            <a href=""><span class="material-symbols-outlined">share</span>Share</a>
+            <a href=""><span class="material-symbols-outlined">sync_alt</span>Compare</a>
+            <span class="material-symbols-outlined heart_button list" id="${heartButtonId}" ${localStorage.getItem(heartButtonId) === 'active'? 'class="active"' : ''}>favorite</span> Like
         </div>
     </div>`
     return a_lot_products;
@@ -117,3 +117,20 @@ function addHeartButton(){
 }
 
 printProduct();
+
+
+function resultsDisplay(){
+    const showResultsInput = document.getElementById('showResults');
+    const resultsDisplay = document.getElementById('resultsDisplay');
+    const totalResults = 32;
+  
+    showResultsInput.addEventListener('input', () => {
+      const showCount = parseInt(showResultsInput.value, 10);
+      if (showCount >= 1 && showCount <= totalResults) {
+        resultsDisplay.textContent = `Showing 1-${showCount} of ${totalResults} results`;
+      } else {
+        alert('Please enter a valid number between 1 and ' + totalResults);
+      }
+    });
+  }
+resultsDisplay();
