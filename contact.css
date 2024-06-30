@@ -1,0 +1,55 @@
+#column-contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+}
+#column-contact h5{
+    font-size: 15px;
+}
+#brand-contact p{
+    color: #9F9F9F;
+}
+#column-contact input{
+    border: 1px solid #9F9F9F;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.input-css{
+    height: 30px;
+}
+#Message{
+    height: 100px;
+    text-align: start;
+}
+#column-contact dt{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#column-contact dd{
+    margin-bottom: 20px;
+}
+#Submit-button{
+    margin-top: 20px;
+    background-color: #B88E2F;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#Submit-button:hover{
+    background-color: #F0B800;
+}
+
+#brand-contact{
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
