@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro - Home</title>
     <script src="generateProducts.js" defer></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
@@ -26,91 +28,114 @@
         </nav>
         <nav id="page-icon">
             <ul id="page-icon-list">
-                <li><a href=""><span class="material-icons">person</span></a></li>
-                <li><a href=""><span class="material-icons">search</span></a></li>
-                <li><a href=""><span class="material-icons">favorite</span></a></li>
-                <li><a href="cart.html"><span class="material-icons">shopping_cart</span></a></li>
+                <li><a href=""><span class="material-symbols-outlined">person_alert</span></a></li>
+                <li><a href=""><span class="material-symbols-outlined">search</span></a></li>
+                <li><a href=""><span class="material-symbols-outlined">favorite</span></a></li>
+                <li><a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
             </ul>
         </nav>
     </header>
 
     <main> 
-        <nav>
-            <img src="Images/background.png" alt="background">
-            <img src="Images/Furniro logo.png" alt="Furniro-logo">
-            <h2 id="contact-header">Contact</h2>
-            <ul>
-                <li id="Home >">Home ></li>
-                <li id="contact">Contact</li>
-            </ul>
+        <nav class="navi-part">
+            <div class="navi-container">
+                <img src="Images/Furniro logo.png" alt="logo">
+                <h2 class="header-text">Contact</h2>
+                <ul class="navi-list">
+                    <li class="Home">Home</li>
+                    <li class="Home">></li>
+                    <li>Contact</li>
+                </ul>
+            </div>
         </nav>
 
         <article id="brand-contact">
             <h3>Get In Touch With Us</h3>
             <p>For More Information About Our Product & Services. Please Feel Free To Drop Us <br> An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
-            <dl>
-                <dt><span class="material-icons">location_on</span>Address</dt>
-                <dd>236 5th SE Avenue, New York NY10000, United States</dd>
-                
-                <dt><span class="material-icons">call</span>Phone</dt>
-                <dd>Mobile: +(84) 546-6789 <br> Hotline: +(84) 456-6789</dd>
-                
-                <dt><span class="material-icons">schedule</span>Working Time</dt>
-                <dd>Monday-Friday: 9:00 - 22:00 <br> Saturday-Sunday: 9:00 - 21:00</dd>
-            </dl>
+            <div id="column-contact">
+                <dl>
+                    <div>
+                        <dt><span class="material-symbols-outlined">location_on</span>Address</dt>
+                        <dd>236 5th SE Avenue, New York NY10000, United States</dd>
+                    </div>
+                    
+                    <div>
+                        <dt><span class="material-symbols-outlined">call</span>Phone</dt>
+                        <dd>Mobile: +(84) 546-6789 <br> Hotline: +(84) 456-6789</dd>
+                    </div>
+                    
+                    <div>
+                        <dt><span class="material-symbols-outlined">schedule</span>Working Time</dt>
+                        <dd>Monday-Friday: 9:00 - 22:00 <br> Saturday-Sunday: 9:00 - 21:00</dd>
+                    </div>
+                    
+                </dl>
+                <form action="" method="get">
+                    <h5>First name: </h5><br>
+                    <input type="text" placeholder="Abc" class="input-css">
+        
+                    <h5>Email address</h5>
+                    <input type="text" placeholder="Abc@def.com" class="input-css">
+        
+                    <h5>Subject</h5>
+                    <input type="text" placeholder="This is an optional" class="input-css">
+        
+                    <h5>Message</h5>
+                    <input type="text" placeholder="Hi! I'd like to ask about" id="Message"><br>
+        
+                    <button id="Submit-button">Submit</button>
+                </form>
+            </div>
+ 
         </article>
 
-        <form action="" method="get">
-            <h5>First name: </h5><br>
-            <input type="text" placeholder="Abc">
 
-            <h5>Email address</h5>
-            <input type="text" placeholder="Abc@def.com">
-
-            <h5>Subject</h5>
-            <input type="text" placeholder="This is an optional">
-
-            <h5>Message</h5>
-            <input type="text" placeholder="Hi! I'd like to ask about"><br>
-
-            <button id="Submit-button">Submit</button>
-        </form>
         
-        <div id="commit">
-            <img src="Images/trophy.png" alt="trophy">
-            <h3>High quality</h3>
-            <p>crafted from top materials</p>
+        <div class="commit">
+            <div>
+                <img src="Images/trophy.png" alt="trophy">
+                <h3>High quality</h3>
+                <p>crafted from top materials</p>
+            </div>
+            
+            <div>
+                <img src="Images/verified.png" alt="verified">
+                <h3>Warranty Protection</h3>
+                <p>Over 2 years</p>
+            </div>
+            
+            <div>
+                <img src="Images/shipping.png" alt="shipping">
+                <h3>Free shipping</h3>
+                <p>Order over 150 $</p>
+    
+            </div>
 
-            <img src="Images/verified.png" alt="verified">
-            <h3>Warranty Protection</h3>
-            <p>Over 2 years</p>
-
-            <img src="Images/shipping.png" alt="shipping">
-            <h3>Free shipping</h3>
-            <p>Order over 150 $</p>
-
-            <img src="Images/customer-support.png" alt="support">
-            <h3>24 / 7 Support</h3>
-            <p>Dedicated support</p>
+            <div>
+                <img src="Images/customer-support.png" alt="support">
+                <h3>24 / 7 Support</h3>
+                <p>Dedicated support</p>
+            </div>            
         </div>
     </main>
     <footer>
         <hr>
-        <h3>Furniro.</h3>
-        <p id="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
-
         <nav id="footer-nav">
-            <div id="footer-links-nav">
+            <div id="column1" class="footer-nav-deco">
+                <h3>Furniro.</h3>
+                <p id="address">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+            </div>
+            <div id="footer-links-nav" class="footer-nav-deco">
                 <p>Links</p>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="blog.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" id="home-link">Home</a></li>
+                    <li><a href="shop.html" id="shop-link">Shop</a></li>
+                    <li><a href="blog.html" id="about-link">About</a></li>
+                    <li><a href="contact.html" id="contact-link">Contact</a></li>
                 </ul>
             </div>
 
-            <div id="footer-help-nav">
+            <div id="footer-help-nav" class="footer-nav-deco">
                 <p>Help</p>
                 <ul>
                     <li><a href="">Payment Options</a></li>
@@ -119,7 +144,7 @@
                 </ul>
             </div>
 
-            <form action="" method="get">
+            <form action="" method="get" class="footer-nav-deco">
                 <p>Newsletter</p>
                 <input type="text" placeholder="Enter Your Email Address" id="email-input">
                 <button id="subscribe-button">SUBSCRIBE</button>

@@ -1,8 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overscroll-behavior: contain;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
+
+footer nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+footer nav ul li{
+  margin-bottom: 20px;
+}
+
+footer nav ul li a:hover{
+  text-decoration: underline;
+  color: #666;
+}
+
 header li {
   display: inline;
 }
@@ -24,6 +50,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+  text-decoration: underline;
   color: #666; 
 }
 .discount_circle{
@@ -57,9 +84,9 @@ header nav ul li a:hover {
 .list{
   display: inline;
 }
-  footer nav{
+footer nav{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4,minmax(250px,1fr));
   text-decoration: none;
   justify-content: center;
   align-content: center;
@@ -68,6 +95,7 @@ header nav ul li a:hover {
 .footer-nav-deco p{
   color: #9F9F9F;
 }
+
 #brand-name{
   display: inline-block;
   font-size: 24px;
@@ -78,13 +106,13 @@ header nav ul li a:hover {
   cursor: pointer;
 }
 
-.material-icons.heart_button {
+.material-symbols-outlined.heart_button {
     border-color:#FFFFFF;
     cursor: pointer;
     font-size: 1.5rem;
   }
   
-.material-icons.heart_button.active {
+.material-symbols-outlined.heart_button.active {
     color: red;
 }
 .row{
@@ -166,11 +194,6 @@ header nav ul li a:hover {
     cursor: pointer;
   }
   
-  /* #show-more-button{
-    position: relative;
-    justify-content: center;
-    align-content: center;
-  } */
   
   .other_button{
     background-color: #B88E2F;
@@ -178,3 +201,79 @@ header nav ul li a:hover {
     border-width: 0;
     cursor: pointer;
   }
+
+  .navi-part{
+    background-image: url(Images/background.png);
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    margin-top: 15px;
+    padding-inline: auto;
+    height: 316px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.navi-container{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    position: absolute;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.navi-list{
+    display: flex;
+    
+}
+.navi-list li{
+    margin-right: 5px;
+}
+.Home{
+    font-weight: bold;
+}
+.navi-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commit{
+  background-color: #FAF3EA;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.navi_button:active{
+  background-color: #B88E2F;
+  color: #FFFFFF;
+}
+
+.navi_button{
+  background-color: #F9F1E7;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  border-width: 0;
+}
+#navigation{
+  display: flex;
+  justify-content: center;
+}
+.navi_button:hover{
+  background-color: #B88E2F;
+  color: #FFFFFF;
+}

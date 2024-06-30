@@ -1,8 +1,50 @@
+.navi-part{
+    background-image: url(Images/background.png);
+    background-size: cover;
+    width: 100%;
+    height: fit-content;
+    margin-top: 15px;
+    padding-inline: auto;
+    height: 316px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.navi-container{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+    position: absolute;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+
+}
+.navi-list{
+    display: flex;
+    
+}
+.navi-list li{
+    margin-right: 5px;
+}
+.Home{
+    font-weight: bold;
+}
+
 .shop-nav {
     background-color: #F9F1E7;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* padding-left: 50px; */
+    /* padding-right: 0px; */
 }
 
 .shop-nav * {
@@ -17,6 +59,25 @@
     margin-right: 10px;
 }
 
+.navi_button:active{
+    background-color: #B88E2F;
+    color: #FFFFFF;
+    border-width: 0;
+}
 
+.navi_button{
+    background-color: #F9F1E7;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+    border-width: 0;
+}
+#navigation{
+    display: flex;
+    justify-content: center;
+}
 
 
