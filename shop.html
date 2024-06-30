@@ -6,7 +6,8 @@
     <title>Furniro - Home</title>
     <script src="generateProducts.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="shop.css">
 </head>
 <body>
     <header>
@@ -35,33 +36,37 @@
     </header>
 
     <main> 
-        <nav>
-            <img src="Images/background.png" alt="background">
-            <h2 id="shop-header">Shop</h2>
-            <ul>
-                <li id="Home >">Home ></li>
-                <li id="shop">Shop</li>
-            </ul>
+        <nav class="navi-part">
+            <div class="navi-container">
+                <h2 class="header-text">Shop</h2>
+                <ul class="navi-list">
+                    <li class="Home">Home</li>
+                    <li class="Home">></li>
+                    <li>Shop</li>
+                </ul>
+            </div>
         </nav>
-
-        <nav id="shop-nav1">
-            <ul id="shop-nav-list1">
-                <li><button id="filter-button"><img src="Images/filter.png" alt="Filter">Filter</button></li>
-                <li><button id="grid-view"><img src="Images/grid.png" alt="grid-view"></button></li>
-                <li><button id="list-view"><img src="Images/view-list.png" alt="list-view"></button></li>
-                <li><p>|</p></li>
-                <li><p>Showing 1-16 of 32 results</p></li>
-            </ul>
-        </nav>
-
-        <nav id="shop-nav2">
-            <ul id="shop-nav-list2">
-                <li><h4>Show</h4></li>
-                <li><input type="number" min="1" max="32" value="16"></li>
-                <li><h4>Short by</h4></li>
-                <div id="filter-box"></div>
-            </ul>
-        </nav>
+        <div id="shop-nav">
+            <nav id="shop-nav1">
+                <ul id="shop-nav-list1">
+                    <li><a id="filter"><img src="Images/filter.png" alt="Filter">Filter</a></li>
+                    <li><a id="grid-view"><img src="Images/grid.png" alt="grid-view"></a></li>
+                    <li><a id="list-view"><img src="Images/view-list.png" alt="list-view"></a></li>
+                    <li><p>|</p></li>
+                    <li><p>Showing 1-16 of 32 results</p></li>
+                </ul>
+            </nav>
+    
+            <nav id="shop-nav2">
+                <ul id="shop-nav-list2">
+                    <li><h4>Show</h4></li>
+                    <li><input type="number" min="1" max="32" value="16"></li>
+                    <li><h4>Short by</h4></li>
+                    <div id="filter-box"></div>
+                </ul>
+            </nav>
+        </div>
+        
         
         <div class="row" id="row2">
         </div>

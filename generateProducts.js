@@ -109,14 +109,8 @@ function addHeartButton(){
             var buttonState = this.classList.contains('active');
             if (buttonState) {
                 localStorage.setItem(buttonId, 'active');
-                // const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
-                // favoriteProducts.push(products.find(product => product.name === buttonId.split('_')[2]));
-                // localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             } else {
                 localStorage.removeItem(buttonId);
-                // const favoriteProducts = JSON.parse(localStorage.getItem("favoriteProducts")) || [];
-                // favoriteProducts.splice(favoriteProducts.findIndex(product => product.name === buttonId.split('_')[2]), 1);
-                // localStorage.setItem("favoriteProducts", JSON.stringify(favoriteProducts));
             }
         });
     });
