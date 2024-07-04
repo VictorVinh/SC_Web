@@ -1,26 +1,98 @@
+*{
+  text-decoration: none;
+  color: black;
+}
 body{
-    background-color: dimgrey ;
+  background-color:  ;
+  color: black;
 }
 .Welcome{
-    border-style: solid;
+  border-style: solid;
 }
 #title{
-    color: cyan;
-    position: relative;
-    
+  color: cyan;
+  position: relative;
+  
 }
-.Welcome p{
-
+#profile{
+  width: 200px;
+  margin: 20px;
+}
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+}
+.nav-content {
+  margin-left: 20px;
+  width: 300px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
 }
 #information-box{
-    border-style: dashed;
-    width: 300px;
-    padding: 20px;
-    background-color: beige;
+  border-style: dashed;
+  width: 300px;
+  padding: 20px;
+  background-color: beige;
 }
 #profile-img{
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    overflow: hidden;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  overflow: hidden;
+}
+header li {
+  display: inline;
+}
+header {
+  background-color: #FFFFFF;
+  padding: 10px; 
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+nav {
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+  position: relative;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #666; 
+}
+
+.content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 1px solid #CCCCCC;
+}
+
+nav ul li:hover .content {
+  display: block;
+}
+
+
+footer {
+  background-color: #FFFFFF;
+  padding: 20px;
 }
